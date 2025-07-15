@@ -1,0 +1,44 @@
+/*
+ * File: assets/css/style.css
+ * Tujuan: Menyimpan semua style kustom yang tidak disediakan oleh Tailwind
+ * atau untuk menimpa (override) style default.
+*/
+
+/* * 1. Impor Google Fonts
+ * ===================================================================
+ * Mengimpor semua font yang dibutuhkan oleh situs (Inter untuk teks utama
+ * dan Orbitron untuk logo) di satu tempat.
+*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Orbitron:wght@700&display=swap');
+
+
+/* * 2. Aturan Dasar untuk Body
+ * ===================================================================
+ * Menerapkan font 'Inter' sebagai font default untuk seluruh
+ * isi halaman web.
+*/
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+
+/* * 3. Kelas Kustom (Custom Classes)
+ * ===================================================================
+ * Di sini kita mendefinisikan kelas-kelas yang kita buat sendiri.
+*/
+
+/* Kelas untuk membuat efek teks dengan gradasi warna */
+.gradient-text {
+    background-image: linear-gradient(to right, #2dd4bf, #38bdf8);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+
+/* * 4. Penyesuaian untuk Plugin (jika ada di masa depan)
+ * ===================================================================
+ * Anda bisa menambahkan penyesuaian untuk plugin seperti
+ * Tailwind Typography di sini jika diperlukan. Untuk saat ini,
+ * kelas .prose dari Tailwind sudah cukup.
+*/

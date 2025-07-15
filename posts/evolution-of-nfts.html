@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Evolution of NFTs | Abbeey Labs</title>
+    
+    <!-- Memuat Framework Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Memuat File CSS Kustom Anda (Perhatikan path ../) -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <!-- Memuat Font untuk Logo dan Teks -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+
+</head>
+<body class="bg-slate-900 text-slate-300">
+
+    <!-- ======================================================= -->
+    <!-- HEADER / NAVIGASI                                       -->
+    <!-- ======================================================= -->
+    <header class="sticky top-0 z-50 bg-slate-900/80 backdrop-blur-sm border-b border-slate-800">
+        <nav class="container mx-auto px-6 md:px-12 py-4 flex justify-between items-center">
+            <a href="../index.html" class="flex items-center gap-x-3" aria-label="Abbeey Labs Homepage">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="50 30 200 210" class="h-10 w-auto">
+                    <defs><linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1ECBE1" /><stop offset="50%" stop-color="#00ADFF" /><stop offset="100%" stop-color="#8A2BE2" /></linearGradient><style type="text/css">.hexagon-stroke{stroke:url(#grad1);stroke-width:8;stroke-linejoin:round;fill:none}.network-line{stroke:url(#grad1);stroke-width:2.5;opacity:.6}.a-shape-stroke{stroke:url(#grad1);stroke-width:6;stroke-linecap:round;stroke-linejoin:round;fill:none}.a-crossbar{stroke:url(#grad1);stroke-width:6}</style></defs>
+                    <polygon points="150,30 220,70 240,140 180,230 120,230 60,140 80,70" class="hexagon-stroke" /><line x1="150" y1="30" x2="180" y2="230" class="network-line" /><line x1="150" y1="30" x2="120" y2="230" class="network-line" /><line x1="60" y1="140" x2="240" y2="140" class="network-line" /><line x1="80" y1="70" x2="220" y2="70" class="network-line" /><line x1="60" y1="140" x2="150" y2="30" class="network-line" /><line x1="240" y1="140" x2="150" y2="30" class="network-line" /><line x1="120" y1="230" x2="220" y2="70" class="network-line" /><line x1="180" y1="230" x2="80" y2="70" class="network-line" /><path d=" M 150 80 L 170 180 L 150 160 L 130 180 Z " class="a-shape-stroke" /><line x1="140" y1="140" x2="160" y2="140" class="a-crossbar" />
+                </svg>
+                <span class="text-2xl font-bold gradient-text" style="font-family: 'Orbitron', sans-serif;">Abbeey Labs</span>
+            </a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="../index.html" class="text-slate-300 hover:text-white transition-colors duration-300">Home</a>
+                <a href="../about.html" class="text-slate-300 hover:text-white transition-colors duration-300">About</a>
+                <a href="../blog.html" class="text-white font-medium">Blog</a>
+                <a href="../contact.html" class="bg-cyan-500 hover:bg-cyan-600 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-300">Contact</a>
+            </div>
+            <button class="md:hidden text-white" aria-label="Buka menu"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg></button>
+        </nav>
+    </header>
+
+    <!-- ======================================================= -->
+    <!-- KONTEN UTAMA HALAMAN ARTIKEL (LAYOUT BARU)              -->
+    <!-- ======================================================= -->
+    <main class="container mx-auto px-6 md:px-12 py-16">
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-x-12">
+            
+            <!-- KOLOM KIRI (SIDEBAR) -->
+            <aside class="lg:col-span-1 mb-12 lg:mb-0">
+                <div class="sticky top-24 space-y-8">
+                    <!-- Author Info -->
+                    <div>
+                        <a href="../about.html" class="flex items-center gap-3 group">
+                            <img src="../assets/images/avatar.png" onerror="this.onerror=null;this.src='https://placehold.co/100x100/0f172a/38bdf8?text=A';" alt="Avatar Abbeey" class="w-12 h-12 rounded-full">
+                            <div>
+                                <p class="font-bold text-white group-hover:text-cyan-400 transition-colors">Abbeey</p>
+                                <p class="text-sm text-slate-400">@Bey_id</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="border-t border-slate-800"></div>
+
+                    <!-- Tags -->
+                    <div>
+                        <h3 class="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-3">Tags</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <a href="../tags/nft.html" class="bg-slate-800 text-cyan-400 hover:bg-slate-700 text-xs font-medium px-2.5 py-1 rounded-md">NFT & DIGITAL ASSETS</a>
+                            <a href="../tags/blockchain.html" class="bg-slate-800 text-cyan-400 hover:bg-slate-700 text-xs font-medium px-2.5 py-1 rounded-md">BLOCKCHAIN</a>
+                        </div>
+                    </div>
+
+                    <div class="border-t border-slate-800"></div>
+
+                    <!-- Navigasi Artikel -->
+                    <div>
+                        <h3 class="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-3">Previous Article</h3>
+                        <a href="understanding-defi.html" class="text-white hover:text-cyan-400 transition-colors">Understanding DeFi</a>
+                    </div>
+                    
+                    <div class="border-t border-slate-800"></div>
+
+                    <a href="../blog.html" class="inline-flex items-center gap-2 text-slate-300 hover:text-cyan-400 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
+                        <span>Back to the blog</span>
+                    </a>
+                </div>
+            </aside>
+
+            <!-- KOLOM KANAN (KONTEN ARTIKEL) -->
+            <article class="lg:col-span-3">
+                <header class="mb-8">
+                    <h1 class="text-4xl md:text-5xl font-black text-white leading-tight">
+                        The Evolution of NFTs: From Art to Utility
+                    </h1>
+                    <p class="text-slate-400 mt-4">Published on June 28, 2025</p>
+                </header>
+
+                <div class="prose prose-lg prose-invert text-slate-300 max-w-none">
+                    <p>
+                        When Non-Fungible Tokens (NFTs) first captured the public's imagination, they were synonymous with multi-million dollar digital art and quirky profile pictures. While this initial wave brought unprecedented attention to digital ownership, it only scratched the surface of what NFTs can do. The true evolution of NFTs lies in their transition from simple collectibles to powerful instruments of utility.
+                    </p>
+                    
+                    <h2>Beyond the JPEG: NFTs as Keys</h2>
+                    <p>
+                        Think of the next generation of NFTs not as static images, but as dynamic digital keys. They can grant access, prove ownership of real-world assets, and unlock unique experiences. This shift from "art" to "access" is where the technology's long-term value is being built.
+                    </p>
+
+                    <img src="https://placehold.co/1200x600/1e293b/818cf8?text=NFT+Utility" alt="Utilitas NFT melampaui seni digital" class="w-full rounded-lg my-8">
+                    
+                    <p>
+                        The utility can manifest in various forms:
+                    </p>
+
+                    <ul>
+                        <li><strong>Ticketing:</strong> An NFT ticket to a concert could prevent scalping and later transform into a collectible video of the performance.</li>
+                        <li><strong>Gaming:</strong> In-game items like swords or skins, represented as NFTs, can be truly owned by players and even traded or used across different games.</li>
+                        <li><strong>Real Estate:</strong> Tokenizing property ownership as an NFT can streamline the process of buying and selling real estate, making it more transparent and efficient.</li>
+                        <li><strong>Membership & Loyalty:</strong> Holding a specific NFT could grant you access to an exclusive community, early product releases, or special discounts, creating a new model for brand loyalty.</li>
+                    </ul>
+
+                    <h2>The Road to Mass Adoption</h2>
+                    <p>
+                        For NFTs to achieve mass adoption, the focus must continue to shift from speculative trading to tangible value. The user experience needs to become seamless, abstracting away the complexities of blockchain for the average user. When people start using NFTs without even realizing they are using a crypto technology, that's when we'll know the evolution is complete.
+                    </p>
+
+                    <blockquote>
+                        "The future of NFTs isn't about what you can sell them for. It's about what you can do with them."
+                    </blockquote>
+
+                    <p>
+                        The "JPEG summer" was just the opening act. The main event is the utility revolution, where NFTs become integrated into the fabric of our digital and physical lives, providing verifiable ownership and access in ways we're only just beginning to imagine.
+                    </p>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <!-- ======================================================= -->
+    <!-- FOOTER                                                  -->
+    <!-- ======================================================= -->
+    <footer class="border-t border-slate-800 mt-20">
+        <div class="container mx-auto px-6 md:px-12 py-8">
+            <div class="text-center text-slate-400">
+                <p>&copy; 2025 Abbeey Labs. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
