@@ -27,8 +27,8 @@ html.dark {
   --color-accent: #2dd4bf; /* Teal 400 */
   --color-card-bg: #1e293b; /* Slate 800 */
   --color-border: #334155; /* Slate 700 */
-  --color-switch-bg: #374151; /* Gray 700 */
-  --color-switch-thumb: #e5e7eb; /* Gray 200 */
+  --color-switch-bg: #1e3a8a; /* Indigo 800 - A deeper night blue */
+  --color-switch-thumb: #d1d5db; /* Gray 300 - A brighter moon */
 }
 
 /* 3. Basic Body Rules */
@@ -54,7 +54,9 @@ body {
 .prose a { color: var(--color-accent); }
 .prose a:hover { text-decoration: underline; }
 
-/* 6. Animated Theme Switch */
+/* ======================================================= */
+/* 6. NEW ANIMATED THEME SWITCH STYLES                     */
+/* ======================================================= */
 .theme-switch-wrapper {
     display: flex;
     align-items: center;
@@ -80,6 +82,7 @@ body {
     background-color: var(--color-switch-bg);
     transition: .4s;
     border-radius: 34px;
+    overflow: hidden; /* Hide parts of icons that go outside */
 }
 .slider:before {
     position: absolute;
@@ -89,9 +92,10 @@ body {
     left: 4px;
     bottom: 4px;
     background-color: var(--color-switch-thumb);
-    transition: .4s;
+    /* Bouncy transition for the thumb */
+    transition: .4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
     border-radius: 50%;
-    overflow: hidden;
+    z-index: 1; /* Ensure thumb is above the background but below icons if needed */
 }
 input:checked + .slider:before {
     transform: translateX(26px);
@@ -100,19 +104,33 @@ input:checked + .slider:before {
 /* Sun and Moon Icons inside the switch */
 .sun-icon, .moon-icon {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 16px;
-    height: 16px;
-    color: var(--color-switch-bg);
-    transition: opacity 0.4s ease, transform 0.4s ease;
+    width: 20px; /* Slightly larger icon */
+    height: 20px;
+    transition: all 0.4s ease-in-out;
 }
 
-/* Light mode styles */
-.moon-icon { opacity: 0; transform: translate(-50%, -50%) rotate(-90deg); }
-.sun-icon { opacity: 1; transform: translate(-50%, -50%) rotate(0deg); }
+/* Light Mode: Sun is visible, Moon is hidden below */
+.sun-icon {
+    top: 50%;
+    left: 7px; /* Position inside the left part of the switch */
+    transform: translateY(-50%);
+    opacity: 1;
+    color: white;
+}
+.moon-icon {
+    top: 50%;
+    left: 33px; /* Position inside the right part of the switch */
+    transform: translateY(100%); /* Start below the slider */
+    opacity: 0;
+    color: white;
+}
 
-/* Dark mode styles */
-html.dark .sun-icon { opacity: 0; transform: translate(-50%, -50%) rotate(90deg); }
-html.dark .moon-icon { opacity: 1; transform: translate(-50%, -50%) rotate(0deg); }
+/* Dark Mode: Sun is hidden below, Moon is visible */
+html.dark .sun-icon {
+    transform: translateY(100%); /* Move down and out */
+    opacity: 0;
+}
+html.dark .moon-icon {
+    transform: translateY(-50%); /* Move up into place */
+    opacity: 1;
+}
