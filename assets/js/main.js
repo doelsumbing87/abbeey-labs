@@ -3,34 +3,37 @@
 
 document.addEventListener('DOMContentLoaded', function () {
 
-    // --- 1. Light/Dark Mode Theme Functionality ---
-    const themeToggleButton = document.getElementById('theme-toggle');
-    const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
-    const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+    // --- 1. Light/Dark Mode Theme Functionality (for Animated Switch) ---
+    const themeToggleCheckbox = document.getElementById('theme-toggle-checkbox');
 
+    // Function to set the theme based on the checkbox state
     function applyTheme(isDarkMode) {
         if (isDarkMode) {
             document.documentElement.classList.add('dark');
         } else {
             document.documentElement.classList.remove('dark');
         }
-        if (themeToggleDarkIcon && themeToggleLightIcon) {
-            themeToggleDarkIcon.classList.toggle('hidden', !isDarkMode);
-            themeToggleLightIcon.classList.toggle('hidden', isDarkMode);
-        }
     }
 
+    // Check for saved theme in localStorage or system preference on page load
     const isDarkMode = localStorage.getItem('theme') === 'dark' || 
                        (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    
+    // Apply the theme and set the checkbox state accordingly
     applyTheme(isDarkMode);
+    if (themeToggleCheckbox) {
+        themeToggleCheckbox.checked = isDarkMode;
+    }
 
-    if (themeToggleButton) {
-        themeToggleButton.addEventListener('click', function() {
-            const newIsDarkMode = !document.documentElement.classList.contains('dark');
+    // Add change listener to the theme toggle checkbox
+    if (themeToggleCheckbox) {
+        themeToggleCheckbox.addEventListener('change', function() {
+            const newIsDarkMode = this.checked;
             localStorage.setItem('theme', newIsDarkMode ? 'dark' : 'light');
             applyTheme(newIsDarkMode);
         });
     }
+
 
     // --- 2. Mobile Menu Functionality ---
     const mobileMenuButton = document.getElementById('mobile-menu-button');
@@ -41,6 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
             mobileMenu.classList.toggle('hidden');
         });
     }
+
 
     // --- 3. Contact Form Functionality (Web3Forms) ---
     const contactForm = document.getElementById('contact-form');
@@ -104,6 +108,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+
     // --- 4. Blog Search Functionality (Filter Method) ---
     const searchInput = document.getElementById('search-input');
     const articleCards = document.querySelectorAll('.article-card');
@@ -140,16 +145,15 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
-
+    
     // --- 5. Live Local Clock Functionality ---
     const timeElement = document.getElementById('local-time');
     
     if (timeElement) {
         function updateTime() {
             const now = new Date();
-            // Format waktu menjadi HH:MM:SS
             const timeString = now.toLocaleTimeString('en-US', {
-                hour12: false, // Gunakan format 24 jam
+                hour12: false,
                 hour: '2-digit',
                 minute: '2-digit',
                 second: '2-digit'
@@ -157,7 +161,7 @@ document.addEventListener('DOMContentLoaded', function () {
             timeElement.textContent = `Your Local Time: ${timeString}`;
         }
         
-        updateTime(); // Panggil sekali saat halaman dimuat
-        setInterval(updateTime, 1000); // Perbarui waktu setiap detik
+        updateTime();
+        setInterval(updateTime, 1000);
     }
 });
