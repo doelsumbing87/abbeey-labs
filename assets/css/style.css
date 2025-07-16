@@ -1,33 +1,41 @@
 /*
  * File: assets/css/style.css
- * Tujuan: Menyimpan semua style kustom yang tidak disediakan oleh Tailwind
- * atau untuk menimpa (override) style default.
+ * Purpose: To store all custom styles and theme variables.
 */
 
-/* * 1. Impor Google Fonts
- * ===================================================================
- * Mengimpor semua font yang dibutuhkan oleh situs (Inter untuk teks utama
- * dan Orbitron untuk logo) di satu tempat.
-*/
+/* 1. Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Orbitron:wght@700&display=swap');
 
-
-/* * 2. Aturan Dasar untuk Body
- * ===================================================================
- * Menerapkan font 'Inter' sebagai font default untuk seluruh
- * isi halaman web.
-*/
-body {
-    font-family: 'Inter', sans-serif;
+/* 2. Theme Color Variable Definitions */
+:root {
+  /* Variables for Light Theme (Default) */
+  --color-bg: #ffffff; /* White */
+  --color-text: #111827; /* Very Dark Gray */
+  --color-text-muted: #6b7280; /* Gray */
+  --color-accent: #0891b2; /* Cyan */
+  --color-card-bg: #f9fafb; /* Very Light Gray */
+  --color-border: #e5e7eb; /* Light Gray */
 }
 
+html.dark {
+  /* Variables for Dark Theme */
+  --color-bg: #0f172a; /* Slate 900 */
+  --color-text: #f8fafc; /* Slate 50 */
+  --color-text-muted: #94a3b8; /* Slate 400 */
+  --color-accent: #2dd4bf; /* Teal 400 */
+  --color-card-bg: #1e293b; /* Slate 800 */
+  --color-border: #334155; /* Slate 700 */
+}
 
-/* * 3. Kelas Kustom (Custom Classes)
- * ===================================================================
- * Di sini kita mendefinisikan kelas-kelas yang kita buat sendiri.
-*/
+/* 3. Basic Body Rules */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
 
-/* Kelas untuk membuat efek teks dengan gradasi warna */
+/* 4. Custom Utility Classes */
 .gradient-text {
     background-image: linear-gradient(to right, #2dd4bf, #38bdf8);
     -webkit-background-clip: text;
@@ -35,10 +43,20 @@ body {
     color: transparent;
 }
 
-
-/* * 4. Penyesuaian untuk Plugin (jika ada di masa depan)
- * ===================================================================
- * Anda bisa menambahkan penyesuaian untuk plugin seperti
- * Tailwind Typography di sini jika diperlukan. Untuk saat ini,
- * kelas .prose dari Tailwind sudah cukup.
-*/
+/* 5. Adjustments for Article Content (Prose) */
+.prose {
+    color: var(--color-text-muted);
+}
+.prose h1, .prose h2, .prose h3, .prose h4, .prose strong {
+    color: var(--color-text);
+}
+.prose blockquote {
+    color: var(--color-text-muted);
+    border-left-color: var(--color-border);
+}
+.prose a {
+    color: var(--color-accent);
+}
+.prose a:hover {
+    text-decoration: underline;
+}

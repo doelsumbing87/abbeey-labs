@@ -1,0 +1,38 @@
+[
+  {
+    "url": "posts/the-future-of-generative-ai.html",
+    "title": "The Future of Generative AI",
+    "summary": "A look into how advanced AI models are changing the landscape of digital media and creativity.",
+    "tags": ["Artificial Intelligence", "AI", "Synergy"]
+  },
+  {
+    "url": "posts/when-ai-meets-blockchain.html",
+    "title": "When AI Meets Blockchain: New Frontiers",
+    "summary": "Exploring the powerful applications that emerge from combining AI and blockchain.",
+    "tags": ["Synergy", "AI", "Blockchain"]
+  },
+  {
+    "url": "posts/understanding-defi.html",
+    "title": "Understanding DeFi: A New Financial Paradigm",
+    "summary": "Breaking down the core concepts of Decentralized Finance (DeFi).",
+    "tags": ["Blockchain", "Crypto", "DeFi"]
+  },
+  {
+    "url": "posts/evolution-of-nfts.html",
+    "title": "The Evolution of NFTs: From Art to Utility",
+    "summary": "From digital art to real-world utility, NFTs are more than just JPEGs.",
+    "tags": ["NFT & Digital Assets", "Blockchain"]
+  },
+  {
+    "url": "posts/crafting-the-perfect-prompt.html",
+    "title": "Crafting the Perfect Prompt: The Art and Science",
+    "summary": "Tips and tricks to get the most out of your interactions with Large Language Models.",
+    "tags": ["AI Prompt Engineering", "AI"]
+  },
+  {
+    "url": "posts/next-bull-run-narratives.html",
+    "title": "Next Bull Run Narratives: What to Watch",
+    "summary": "A speculative look at the potential trends that could drive the next market cycle.",
+    "tags": ["Crypto", "Blockchain"]
+  }
+]

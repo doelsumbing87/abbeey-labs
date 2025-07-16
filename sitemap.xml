@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Halaman Utama (Prioritas Tertinggi) -->
+  <url>
+    <loc>https://abbeey-labs.vercel.app/index.html</loc>
+    <lastmod>2025-07-16</lastmod>
+    <priority>1.00</priority>
+  </url>
+  
+  <!-- Halaman Utama Lainnya -->
+  <url>
+    <loc>https://abbeey-labs.vercel.app/about.html</loc>
+    <lastmod>2025-07-16</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://abbeey-labs.vercel.app/blog.html</loc>
+    <lastmod>2025-07-16</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://abbeey-labs.vercel.app/contact.html</loc>
+    <lastmod>2025-07-16</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Semua Halaman Artikel Blog (Prioritas Tinggi) -->
+  <url>
+    <loc>https://abbeey-labs.vercel.app/posts/the-future-of-generative-ai.html</loc>
+    <lastmod>2025-07-16</lastmod>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://abbeey-labs.vercel.app/posts/when-ai-meets-blockchain.html</loc>
+    <lastmod>2025-07-16</lastmod>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://abbeey-labs.vercel.app/posts/understanding-defi.html</loc>
+    <lastmod>2025-07-16</lastmod>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://abbeey-labs.vercel.app/posts/evolution-of-nfts.html</loc>
+    <lastmod>2025-07-16</lastmod>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://abbeey-labs.vercel.app/posts/crafting-the-perfect-prompt.html</loc>
+    <lastmod>2025-07-16</lastmod>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://abbeey-labs.vercel.app/posts/next-bull-run-narratives.html</loc>
+    <lastmod>2025-07-16</lastmod>
+    <priority>0.90</priority>
+  </url>
+
+  <!-- Halaman Tag -->
+  <url>
+    <loc>https://abbeey-labs.vercel.app/tags/ai.html</loc>
+    <lastmod>2025-07-16</lastmod>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://abbeey-labs.vercel.app/tags/blockchain.html</loc>
+    <lastmod>2025-07-16</lastmod>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://abbeey-labs.vercel.app/tags/crypto.html</loc>
+    <lastmod>2025-07-16</lastmod>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://abbeey-labs.vercel.app/tags/nft.html</loc>
+    <lastmod>2025-07-16</lastmod>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://abbeey-labs.vercel.app/tags/synergy.html</loc>
+    <lastmod>2025-07-16</lastmod>
+    <priority>0.70</priority>
+  </url>
+
+</urlset>
