@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
     const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
 
-    // Function to update the theme and icons
     function applyTheme(isDarkMode) {
         if (isDarkMode) {
             document.documentElement.classList.add('dark');
@@ -21,12 +20,10 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    // Check for saved theme in localStorage or system preference on page load
     const isDarkMode = localStorage.getItem('theme') === 'dark' || 
                        (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches);
     applyTheme(isDarkMode);
 
-    // Add click listener to the theme toggle button
     if (themeToggleButton) {
         themeToggleButton.addEventListener('click', function() {
             const newIsDarkMode = !document.documentElement.classList.contains('dark');
@@ -34,7 +31,6 @@ document.addEventListener('DOMContentLoaded', function () {
             applyTheme(newIsDarkMode);
         });
     }
-
 
     // --- 2. Mobile Menu Functionality ---
     const mobileMenuButton = document.getElementById('mobile-menu-button');
@@ -45,7 +41,6 @@ document.addEventListener('DOMContentLoaded', function () {
             mobileMenu.classList.toggle('hidden');
         });
     }
-
 
     // --- 3. Contact Form Functionality (Web3Forms) ---
     const contactForm = document.getElementById('contact-form');
@@ -109,7 +104,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-
     // --- 4. Blog Search Functionality (Filter Method) ---
     const searchInput = document.getElementById('search-input');
     const articleCards = document.querySelectorAll('.article-card');
@@ -145,5 +139,25 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             }
         });
+    }
+
+    // --- 5. Live Local Clock Functionality ---
+    const timeElement = document.getElementById('local-time');
+    
+    if (timeElement) {
+        function updateTime() {
+            const now = new Date();
+            // Format waktu menjadi HH:MM:SS
+            const timeString = now.toLocaleTimeString('en-US', {
+                hour12: false, // Gunakan format 24 jam
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit'
+            });
+            timeElement.textContent = `Your Local Time: ${timeString}`;
+        }
+        
+        updateTime(); // Panggil sekali saat halaman dimuat
+        setInterval(updateTime, 1000); // Perbarui waktu setiap detik
     }
 });
