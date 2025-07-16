@@ -48,11 +48,11 @@
 <body class="bg-[var(--color-bg)] text-[var(--color-text)] transition-colors duration-300">
 
     <!-- ======================================================= -->
-    <!-- HEADER / NAVIGATION                                     -->
+    <!-- HEADER / NAVIGATION (WITH THEME TOGGLE)                 -->
     <!-- ======================================================= -->
     <header class="sticky top-0 z-50 bg-[var(--color-bg)]/80 backdrop-blur-sm border-b border-[var(--color-border)]">
         <nav class="container mx-auto px-6 md:px-12 py-4 flex justify-between items-center">
-            <a href="index.html" class="flex items-center gap-x-3" aria-label="Abbeey Labs Homepage">
+            <a href="../index.html" class="flex items-center gap-x-3" aria-label="Abbeey Labs Homepage">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="50 30 200 210" class="h-10 w-auto">
                     <defs><linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1ECBE1" /><stop offset="50%" stop-color="#00ADFF" /><stop offset="100%" stop-color="#8A2BE2" /></linearGradient><style type="text/css">.hexagon-stroke{stroke:url(#grad1);stroke-width:8;stroke-linejoin:round;fill:none}.network-line{stroke:url(#grad1);stroke-width:2.5;opacity:.6}.a-shape-stroke{stroke:url(#grad1);stroke-width:6;stroke-linecap:round;stroke-linejoin:round;fill:none}.a-crossbar{stroke:url(#grad1);stroke-width:6}</style></defs>
                     <polygon points="150,30 220,70 240,140 180,230 120,230 60,140 80,70" class="hexagon-stroke" /><line x1="150" y1="30" x2="180" y2="230" class="network-line" /><line x1="150" y1="30" x2="120" y2="230" class="network-line" /><line x1="60" y1="140" x2="240" y2="140" class="network-line" /><line x1="80" y1="70" x2="220" y2="70" class="network-line" /><line x1="60" y1="140" x2="150" y2="30" class="network-line" /><line x1="240" y1="140" x2="150" y2="30" class="network-line" /><line x1="120" y1="230" x2="220" y2="70" class="network-line" /><line x1="180" y1="230" x2="80" y2="70" class="network-line" /><path d=" M 150 80 L 170 180 L 150 160 L 130 180 Z " class="a-shape-stroke" /><line x1="140" y1="140" x2="160" y2="140" class="a-crossbar" />
@@ -61,32 +61,32 @@
             </a>
             
             <div class="flex items-center">
-                <!-- Menu Desktop -->
+                <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="index.html" class="text-[var(--color-accent)] font-medium">Home</a>
-                    <a href="about.html" class="hover:text-[var(--color-accent)] transition-colors">About</a>
-                    <a href="blog.html" class="hover:text-[var(--color-accent)] transition-colors">Blog</a>
-                    <a href="contact.html" class="hover:text-[var(--color-accent)] transition-colors">Contact</a>
+                    <a href="../index.html" class="hover:text-[var(--color-accent)] transition-colors">Home</a>
+                    <a href="../about.html" class="hover:text-[var(--color-accent)] transition-colors">About</a>
+                    <a href="../blog.html" class="text-[var(--color-accent)] font-medium">Blog</a>
+                    <a href="../contact.html" class="hover:text-[var(--color-accent)] transition-colors">Contact</a>
                 </div>
 
-                <!-- Tombol Tema -->
+                <!-- Theme Toggle Button -->
                 <button id="theme-toggle" type="button" class="ml-6 text-[var(--color-text-muted)] hover:bg-[var(--color-card-bg)] focus:outline-none rounded-lg text-sm p-2.5">
                     <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
                     <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm-.707 8.486a1 1 0 011.414 0l.707.707a1 1 0 01-1.414 1.414l-.707-.707a1 1 0 010-1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
                 </button>
 
-                <!-- Tombol Menu Mobile -->
+                <!-- Mobile Menu Button -->
                 <button id="mobile-menu-button" class="md:hidden ml-4 text-[var(--color-text)]" aria-label="Open menu">
                     <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg>
                 </button>
             </div>
         </nav>
-        <!-- Daftar Menu Mobile -->
+        <!-- Mobile Menu List -->
         <div id="mobile-menu" class="hidden md:hidden bg-[var(--color-bg)] container mx-auto px-6 pb-4">
-            <a href="index.html" class="block py-2 text-[var(--color-accent)] font-medium">Home</a>
-            <a href="about.html" class="block py-2 hover:text-[var(--color-accent)]">About</a>
-            <a href="blog.html" class="block py-2 hover:text-[var(--color-accent)]">Blog</a>
-            <a href="contact.html" class="block mt-2 py-2 hover:text-[var(--color-accent)]">Contact</a>
+            <a href="../index.html" class="block py-2 hover:text-[var(--color-accent)]">Home</a>
+            <a href="../about.html" class="block py-2 hover:text-[var(--color-accent)]">About</a>
+            <a href="../blog.html" class="block py-2 text-[var(--color-accent)] font-medium">Blog</a>
+            <a href="../contact.html" class="block mt-2 py-2 hover:text-[var(--color-accent)]">Contact</a>
         </div>
     </header>
 
@@ -104,34 +104,34 @@
                         <a href="../about.html" class="flex items-center gap-3 group">
                             <img src="../assets/images/avatar.png" onerror="this.onerror=null;this.src='https://placehold.co/100x100/0f172a/38bdf8?text=A';" alt="Abbeey's Avatar" class="w-12 h-12 rounded-full">
                             <div>
-                                <p class="font-bold text-white group-hover:text-cyan-400 transition-colors">Abbeey</p>
-                                <p class="text-sm text-slate-400">@Bey_id</p>
+                                <p class="font-bold text-[var(--color-text)] group-hover:text-[var(--color-accent)] transition-colors">Abbeey</p>
+                                <p class="text-sm text-[var(--color-text-muted)]">@Bey_id</p>
                             </div>
                         </a>
                     </div>
 
-                    <div class="border-t border-slate-800"></div>
+                    <div class="border-t border-[var(--color-border)]"></div>
 
                     <!-- Tags -->
                     <div>
-                        <h3 class="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-3">Tags</h3>
+                        <h3 class="text-sm font-semibold text-[var(--color-text-muted)] uppercase tracking-wider mb-3">Tags</h3>
                         <div class="flex flex-wrap gap-2">
-                            <a href="../tags/ai.html" class="bg-slate-800 text-cyan-400 hover:bg-slate-700 text-xs font-medium px-2.5 py-1 rounded-md">AI</a>
-                            <a href="../tags/synergy.html" class="bg-slate-800 text-cyan-400 hover:bg-slate-700 text-xs font-medium px-2.5 py-1 rounded-md">SYNERGY</a>
+                            <a href="../tags/ai.html" class="bg-[var(--color-card-bg)] text-[var(--color-accent)] hover:bg-[var(--color-border)] text-xs font-medium px-2.5 py-1 rounded-md">AI</a>
+                            <a href="../tags/synergy.html" class="bg-[var(--color-card-bg)] text-[var(--color-accent)] hover:bg-[var(--color-border)] text-xs font-medium px-2.5 py-1 rounded-md">SYNERGY</a>
                         </div>
                     </div>
 
-                    <div class="border-t border-slate-800"></div>
+                    <div class="border-t border-[var(--color-border)]"></div>
 
                     <!-- Article Navigation -->
-                    <div>
-                        <h3 class="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-3">Next Article</h3>
-                        <a href="when-ai-meets-blockchain.html" class="text-white hover:text-cyan-400 transition-colors">When AI Meets Blockchain</a>
+                     <div>
+                        <h3 class="text-sm font-semibold text-[var(--color-text-muted)] uppercase tracking-wider mb-3">Next Article</h3>
+                        <a href="when-ai-meets-blockchain.html" class="text-[var(--color-text)] hover:text-[var(--color-accent)] transition-colors">When AI Meets Blockchain</a>
                     </div>
                     
-                    <div class="border-t border-slate-800"></div>
+                    <div class="border-t border-[var(--color-border)]"></div>
 
-                    <a href="../blog.html" class="inline-flex items-center gap-2 text-slate-300 hover:text-cyan-400 transition-colors">
+                    <a href="../blog.html" class="inline-flex items-center gap-2 text-[var(--color-text-muted)] hover:text-[var(--color-accent)] transition-colors">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
                         <span>Back to the blog</span>
                     </a>
@@ -141,28 +141,24 @@
             <!-- RIGHT COLUMN (ARTICLE CONTENT) -->
             <article class="lg:col-span-3">
                 <header class="mb-8">
-                    <h1 class="text-4xl md:text-5xl font-black text-white leading-tight">
+                    <h1 class="text-4xl md:text-5xl font-black text-[var(--color-text)] leading-tight">
                         The Future of Generative AI
                     </h1>
-                    <p class="text-slate-400 mt-4">Published on July 15, 2025</p>
+                    <p class="text-[var(--color-text-muted)] mt-4">Published on July 15, 2025</p>
                 </header>
 
-                <div class="prose prose-lg prose-invert text-slate-300 max-w-none">
+                <div class="prose prose-lg max-w-none">
                     <p>
                         Generative AI has exploded onto the scene, transforming from a niche academic concept into a mainstream phenomenon. Models like GPT-4, Midjourney, and Stable Diffusion are not just tools; they are creative partners, capable of producing text, images, and code that are often indistinguishable from human-made content. But what does the future hold for this powerful technology?
                     </p>
-                    
                     <h2>From Assistance to Augmentation</h2>
                     <p>
                         Initially, AI was seen as an assistant—a tool to automate repetitive tasks. Generative AI pushes this boundary further, moving into the realm of augmentation. It doesn't just do what you tell it; it collaborates, suggests, and expands upon your ideas. A writer can use it to overcome writer's block, a designer can generate dozens of visual concepts in minutes, and a developer can debug code more efficiently.
                     </p>
-                    
                     <img src="../assets/images/blog/generative-ai-post.jpg" onerror="this.onerror=null;this.src='https://placehold.co/1200x600/1e293b/ffffff?text=AI+Innovation';" alt="The Future of Generative AI" class="w-full rounded-lg my-8">
-
                     <blockquote>
                         "The goal is not to replace human creativity, but to amplify it. Generative AI is a new paintbrush, not a new painter."
                     </blockquote>
-
                     <h2>Challenges on the Horizon</h2>
                     <p>
                         Despite its potential, the road ahead is not without its challenges. Ethical considerations, such as misinformation, copyright, and job displacement, are at the forefront of the conversation. Ensuring that these models are used responsibly is paramount. Additionally, the immense computational power required to train and run these models raises environmental and accessibility concerns.
@@ -183,9 +179,9 @@
     <!-- ======================================================= -->
     <!-- FOOTER                                                  -->
     <!-- ======================================================= -->
-    <footer class="border-t border-slate-800 mt-20">
+    <footer class="border-t border-[var(--color-border)] mt-20">
         <div class="container mx-auto px-6 md:px-12 py-8">
-            <div class="text-center text-slate-400">
+            <div class="text-center text-[var(--color-text-muted)]">
                 <p>&copy; 2025 Abbeey Labs. All Rights Reserved.</p>
             </div>
         </div>
