@@ -1,17 +1,45 @@
 <!DOCTYPE html>
-<html lang="id" class="scroll-smooth">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>When AI Meets Blockchain | Abbeey Labs</title>
     
-    <!-- Memuat Framework Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Memuat File CSS Kustom Anda (Perhatikan path ../) -->
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <!-- ======================================================= -->
+    <!-- BASIC & SEO INFORMATION                                 -->
+    <!-- ======================================================= -->
+    <title>When AI Meets Blockchain: New Frontiers | Abbeey Labs Blog</title>
+    <meta name="description" content="Exploring the powerful synergy between AI's intelligent decision-making and blockchain's secure, decentralized ledger.">
+    <meta name="author" content="Abbeey">
 
-    <!-- Memuat Font untuk Logo dan Teks -->
+    <!-- ======================================================= -->
+    <!-- FAVICONS (As per your files)                            -->
+    <!-- ======================================================= -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-16x16.png">
+    <link rel="manifest" href="../assets/images/site.webmanifest">
+    <link rel="shortcut icon" href="../assets/images/favicon.ico">
+
+    <!-- ======================================================= -->
+    <!-- SOCIAL MEDIA META TAGS (OPEN GRAPH)                     -->
+    <!-- ======================================================= -->
+    <meta property="og:title" content="When AI Meets Blockchain: New Frontiers | Abbeey Labs Blog">
+    <meta property="og:description" content="Exploring the powerful synergy between AI's intelligent decision-making and blockchain's secure, decentralized ledger.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://abbeey-labs.vercel.app/posts/when-ai-meets-blockchain.html">
+    <meta property="og:image" content="https://abbeey-labs.vercel.app/assets/images/social-preview.png"> 
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="When AI Meets Blockchain: New Frontiers | Abbeey Labs Blog">
+    <meta name="twitter:description" content="Exploring the powerful synergy between AI's intelligent decision-making and blockchain's secure, decentralized ledger.">
+    <meta name="twitter:image" content="https://abbeey-labs.vercel.app/assets/images/social-preview.png">
+
+    <!-- ======================================================= -->
+    <!-- STYLESHEETS & FONTS                                     -->
+    <!-- ======================================================= -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
@@ -20,7 +48,7 @@
 <body class="bg-slate-900 text-slate-300">
 
     <!-- ======================================================= -->
-    <!-- HEADER / NAVIGASI                                       -->
+    <!-- HEADER / NAVIGATION                                     -->
     <!-- ======================================================= -->
     <header class="sticky top-0 z-50 bg-slate-900/80 backdrop-blur-sm border-b border-slate-800">
         <nav class="container mx-auto px-6 md:px-12 py-4 flex justify-between items-center">
@@ -37,23 +65,32 @@
                 <a href="../blog.html" class="text-white font-medium">Blog</a>
                 <a href="../contact.html" class="bg-cyan-500 hover:bg-cyan-600 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-300">Contact</a>
             </div>
-            <button class="md:hidden text-white" aria-label="Buka menu"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg></button>
+            <button id="mobile-menu-button" class="md:hidden text-white" aria-label="Open menu">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg>
+            </button>
         </nav>
+        <!-- Mobile Menu List (hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden container mx-auto px-6 pb-4">
+            <a href="../index.html" class="block py-2 text-slate-300 hover:text-white">Home</a>
+            <a href="../about.html" class="block py-2 text-slate-300 hover:text-white">About</a>
+            <a href="../blog.html" class="block py-2 text-white font-medium">Blog</a>
+            <a href="../contact.html" class="block mt-2 py-2 px-4 bg-cyan-500 text-white rounded-lg text-center">Contact</a>
+        </div>
     </header>
 
     <!-- ======================================================= -->
-    <!-- KONTEN UTAMA HALAMAN ARTIKEL (LAYOUT BARU)              -->
+    <!-- MAIN ARTICLE CONTENT (NEW LAYOUT)                       -->
     <!-- ======================================================= -->
     <main class="container mx-auto px-6 md:px-12 py-16">
         <div class="grid grid-cols-1 lg:grid-cols-4 gap-x-12">
             
-            <!-- KOLOM KIRI (SIDEBAR) -->
+            <!-- LEFT COLUMN (SIDEBAR) -->
             <aside class="lg:col-span-1 mb-12 lg:mb-0">
                 <div class="sticky top-24 space-y-8">
                     <!-- Author Info -->
                     <div>
                         <a href="../about.html" class="flex items-center gap-3 group">
-                            <img src="../assets/images/avatar.png" onerror="this.onerror=null;this.src='https://placehold.co/100x100/0f172a/38bdf8?text=A';" alt="Avatar Abbeey" class="w-12 h-12 rounded-full">
+                            <img src="../assets/images/avatar.png" onerror="this.onerror=null;this.src='https://placehold.co/100x100/0f172a/38bdf8?text=A';" alt="Abbeey's Avatar" class="w-12 h-12 rounded-full">
                             <div>
                                 <p class="font-bold text-white group-hover:text-cyan-400 transition-colors">Abbeey</p>
                                 <p class="text-sm text-slate-400">@Bey_id</p>
@@ -75,10 +112,14 @@
 
                     <div class="border-t border-slate-800"></div>
 
-                    <!-- Navigasi Artikel -->
+                    <!-- Article Navigation -->
                     <div>
-                        <h3 class="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-3">Next Article</h3>
+                        <h3 class="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-3">Previous Article</h3>
                         <a href="the-future-of-generative-ai.html" class="text-white hover:text-cyan-400 transition-colors">The Future of Generative AI</a>
+                    </div>
+                     <div>
+                        <h3 class="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-3">Next Article</h3>
+                        <a href="understanding-defi.html" class="text-white hover:text-cyan-400 transition-colors">Understanding DeFi</a>
                     </div>
                     
                     <div class="border-t border-slate-800"></div>
@@ -90,7 +131,7 @@
                 </div>
             </aside>
 
-            <!-- KOLOM KANAN (KONTEN ARTIKEL) -->
+            <!-- RIGHT COLUMN (ARTICLE CONTENT) -->
             <article class="lg:col-span-3">
                 <header class="mb-8">
                     <h1 class="text-4xl md:text-5xl font-black text-white leading-tight">
@@ -109,7 +150,7 @@
                         At its core, blockchain offers trust and transparency. AI, on the other hand, excels at learning from data to make predictions and automate complex processes. Together, they can create systems that are not only intelligent but also incredibly secure and autonomous.
                     </p>
 
-                    <img src="../assets/images/blog/ai-blockchain-post.jpg" onerror="this.onerror=null;this.src='https://placehold.co/1200x600/1e293b/ffffff?text=Tech+Synergy';" alt="Sinergi antara AI dan Blockchain" class="w-full rounded-lg my-8">
+                    <img src="../assets/images/blog/ai-blockchain-post.jpg" onerror="this.onerror=null;this.src='https://placehold.co/1200x600/1e293b/ffffff?text=Tech+Synergy';" alt="Synergy between AI and Blockchain" class="w-full rounded-lg my-8">
                     
                     <p>
                         Imagine a supply chain where an AI can predict demand, automatically place orders, and track shipments, with every transaction recorded immutably on a blockchain. This eliminates fraud, reduces errors, and creates a level of efficiency previously unattainable.
@@ -145,5 +186,7 @@
         </div>
     </footer>
 
+    <!-- Link to JavaScript file -->
+    <script src="../assets/js/main.js"></script>
 </body>
 </html>

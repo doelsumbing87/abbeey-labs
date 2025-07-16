@@ -1,39 +1,78 @@
 // File: assets/js/main.js
 // Tujuan: Menambahkan fungsionalitas interaktif ke situs web.
 
-/**
- * Menunggu hingga seluruh konten halaman HTML (DOM) selesai dimuat
- * sebelum menjalankan kode JavaScript. Ini adalah praktik terbaik untuk
- * memastikan semua elemen HTML sudah ada saat script mencoba mengaksesnya.
- */
 document.addEventListener('DOMContentLoaded', function () {
 
     // --- Fungsionalitas Menu Mobile ---
-
-    // 1. Pilih elemen tombol menu dan daftar menu berdasarkan ID mereka.
     const mobileMenuButton = document.getElementById('mobile-menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
 
-    // 2. Tambahkan "event listener" (pendengar acara) pada tombol menu.
-    //    Kode di dalamnya akan berjalan setiap kali tombol diklik.
-    //    Pengecekan 'if (mobileMenuButton && mobileMenu)' memastikan
-    //    kode tidak error jika elemen-elemen ini tidak ada di halaman.
     if (mobileMenuButton && mobileMenu) {
         mobileMenuButton.addEventListener('click', function () {
-            
-            // 3. Toggle (alihkan) kelas 'hidden' pada elemen menu.
-            //    - Jika menu sedang tersembunyi (memiliki kelas 'hidden'), kelas itu akan dihapus.
-            //    - Jika menu sedang tampil (tidak memiliki kelas 'hidden'), kelas itu akan ditambahkan.
-            //    Ini adalah cara sederhana untuk membuat efek buka/tutup.
             mobileMenu.classList.toggle('hidden');
         });
     }
 
+    // --- Fungsionalitas Form Kontak dengan Web3Forms ---
+    const contactForm = document.getElementById('contact-form');
+    const formResult = document.getElementById('form-result');
 
-    // --- Tempat untuk Fungsionalitas JavaScript Lainnya di Masa Depan ---
-    // Contoh:
-    // - Tombol "Scroll to Top"
-    // - Animasi saat elemen di-scroll (reveal on scroll)
-    // - Validasi formulir kontak yang lebih canggih
+    // Pastikan elemen form ada di halaman sebelum menambahkan event listener
+    if (contactForm) {
+        contactForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const formData = new FormData(contactForm);
+            const object = {};
+            formData.forEach((value, key) => {
+                object[key] = value;
+            });
+            const json = JSON.stringify(object);
+            
+            if(formResult) {
+                formResult.innerHTML = "Please wait...";
+                formResult.classList.remove('text-green-500', 'text-red-500');
+                formResult.classList.add('text-slate-400');
+            }
 
+            fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: json
+                })
+                .then(async (response) => {
+                    let jsonResponse = await response.json();
+                    if (formResult) {
+                        if (response.status == 200) {
+                            formResult.innerHTML = "Message sent successfully!";
+                            formResult.classList.remove('text-slate-400', 'text-red-500');
+                            formResult.classList.add('text-green-500');
+                        } else {
+                            console.log(response);
+                            formResult.innerHTML = jsonResponse.message;
+                            formResult.classList.remove('text-slate-400', 'text-green-500');
+                            formResult.classList.add('text-red-500');
+                        }
+                    }
+                })
+                .catch(error => {
+                    console.log(error);
+                    if (formResult) {
+                        formResult.innerHTML = "Something went wrong!";
+                        formResult.classList.remove('text-slate-400', 'text-green-500');
+                        formResult.classList.add('text-red-500');
+                    }
+                })
+                .then(function () {
+                    contactForm.reset();
+                    setTimeout(() => {
+                        if (formResult) {
+                           formResult.innerHTML = ""; // Clear the message after 5 seconds
+                        }
+                    }, 5000);
+                });
+        });
+    }
 });
